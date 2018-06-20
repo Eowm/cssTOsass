@@ -1,0 +1,363 @@
+$color-grey: #313234;
+$color-blue: #10A2DA;
+
+* {
+	box-sizing: border-box;	
+}
+
+body {
+  margin: 0;
+}
+
+.row::before,
+.row::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+header {
+  background-color: $color-grey;
+	nav img {
+  		padding: 10px 0;
+	}
+	 > nav ul {
+  		float: right;
+  		margin: 0;
+  		padding: 0;
+  		list-style-type: none;
+  		display: block;
+	}
+	> nav ul > li {
+  		display: inline-block;
+	}
+ 	> nav ul > li > a {
+  		line-height: 50px;
+  		position: relative;
+  		color: #fff;
+  		padding: 0 10px;
+  		text-decoration: none;
+  		text-transform: uppercase;
+  			&:hover {
+  				color: $color-blue;
+  			}
+	} 
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pic {
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.hero {
+	@extend .pic;
+	height: 100%;
+	max-height: 500px;
+	text-align: center;
+	background-image: url(https://images.pexels.com/photos/1008239/pexels-photo-1008239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-size: cover;
+	position: relative;
+}
+
+.slogan {
+	padding: 10px 100px;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	font-size: 28px;
+	position: absolute;
+	top: 70%;
+	left: 60%;
+}
+
+[class*="col-"] {
+	float: left;
+	min-height: 1px;
+	padding: 0px;
+	text-align: center;
+}
+
+.three-elements {
+	padding: 40px 0;
+		.fa {	
+			font-size: 130px;
+			background-color: $color-grey;
+			height: 150px;
+			width: 150px;
+			padding: 10px 10px 0 10px;
+			color: #fff;
+			border-radius: 10px;
+				&:hover {
+					background-color: $color-blue;
+						h3 {
+							color: $color-blue;
+						}
+				}
+		}
+}
+
+
+section>.container {
+	margin: 50px auto;
+}
+
+.text {
+	max-width: 900px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 28px;	
+}
+
+p {
+	color:	#30444B;
+}
+
+.gallery {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	background-color: #A4845E;
+	padding: 0 0 50px 0;
+		.col-2 {
+			position: relative;
+				&:hover img {
+					opacity: 0.6;
+				}
+				&:hover i {
+					opacity: 1;
+				}
+		}
+		.fa-camera-retro {
+			position: absolute;	
+			color: black;
+			z-index: 2;
+			top: calc(50% - 16px);
+			left: calc(40% - 21px);
+		}
+		.fa-search {
+			position: absolute;	
+			color: #000;
+			z-index: 2;
+			top: calc(50% - 16px);
+			right: calc(40% - 20px);
+		}
+		i {
+			opacity:0;
+		}
+}
+
+.people {
+	padding: 40px 40px;	
+		img {
+			border-radius: 50%;
+			width:calc(100% - 20px);
+				&:hover {
+					opacity: 0.7;	
+				}
+		}
+		h2 {
+			font-size: 20px;	
+		}
+	
+}
+
+.ipad {
+	background-color: $color-grey;
+	padding: 50px 0 50px 0;
+	position: relative;
+		img {
+			width: 100%;
+			background-position: center;
+			background-size: cover;
+			padding: 2vw;
+		}
+		h1 {
+			color: #fff;
+			font-size: 50px;
+			text-align: left;
+		}
+		p {
+			color: #fff;
+			font-size: 25px;
+			text-align: left;
+		}
+}
+
+.numbers {
+	padding: 100px 0;
+		h1 {
+			font-size: 80px;
+			padding: 0px;
+			margin: 0px;
+		}
+		p {
+			font-size: 25px;
+			color: $color-blue;
+			padding: 0px;
+			margin: 0px;
+			text-align: center;
+		}
+}
+
+.bottom {
+	background-color: $color-grey;
+	padding: 20px 0;
+		h1 {
+			text-align:left;
+			margin: 20px 5px 10px;
+			color: $color-blue;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		p {
+			text-align:left;
+			margin: 0 5px;
+			color: #fff;
+		}
+		button {
+			background-color: $color-blue;
+			height: 40px;
+			width: 40px;
+			text-align:center;
+			color: #fff;
+			-webkit-transition: 1s;
+				&:hover  {
+					background-color: white;
+				}
+				&:hover i {
+					color: $color-blue;
+				}
+		}	
+}
+
+.social {
+	float: left;
+	margin: 5px;
+	border: none;
+	font-size: 25px;
+}
+
+.copyrigt {
+	background-color: #252726;
+	color: white;
+	text-align: center;
+	margin: 0;
+	font-size: 20px;
+	border: 3px #252726 solid;
+}
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+.col-offset-0{margin-left:0%;}
+.col-offset-1{margin-left:8.33%;}
+.col-offset-2{margin-left:16.66%;}
+.col-offset-3{margin-left:25%;}
+.col-offset-4{margin-left:33.33%;}
+.col-offset-5{margin-left:41.66%;}
+.col-offset-6{margin-left:50%;}
+.col-offset-7{margin-left:58.33%}
+.col-offset-8{margin-left:66.66%}
+.col-offset-9{margin-left:75%;}
+.col-offset-10{margin-left:83.33%;}
+.col-offset-11{margin-left:91.66%;}
+
+@media (max-width: 1200px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    
+    .col-offset-m-0{margin-left:0%;}
+	.col-offset-m-1{margin-left:8.33%;}
+	.col-offset-m-2{margin-left:16.66%;}
+	
+	.three-elements .col-4 {
+		padding: 3vw;	
+	}
+
+	.gallery img {
+	 	margin-bottom: 2vw;
+	 	padding: 0 3vh;
+	}
+	
+	.people h2, .numbers p {
+		margin-bottom: 5vh;	
+	}
+	
+	.ipad h1, .ipad p {
+		text-align: center;	
+	}
+}
+
+@media (max-width: 767px){
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    
+    .col-offset-s-0{margin-left:0%;}
+    .col-offset-s-1{margin-left:8.33%;}
+    .col-offset-s-2{margin-left:16.66%;}
+    
+    .slogan {
+		left: 30%;
+	}
+    
+    header {
+    	text-align: center;
+    		> nav ul {
+  				float: none;
+  					> li {
+  						display: none;
+					}
+			}
+    }	
+    
+	.three-elements .col-4 {
+		padding: 3vw;	
+	}
+	
+	.gallery .pic {
+		padding: 2vw;	
+	}
+	
+	.bottom h1, .bottom p, .bottom .fa {
+		text-align: center;	
+	}
+}
