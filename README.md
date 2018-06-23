@@ -1,3 +1,3 @@
 # cssTOsass
 
-Leyout of page from pdf
+Leyout of page from pdf, responsywna
